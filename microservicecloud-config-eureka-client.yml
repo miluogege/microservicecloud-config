@@ -1,0 +1,37 @@
+﻿sprng:
+  profiles:
+    active:
+    -dev
+---
+server:
+  port: 7001#注册中心占用7001端口
+  
+spring:
+  profiles: dev
+  application:
+    name: microservicecloud-config-eureka-client
+
+eureka:
+  instance:
+    hostname: eureka7001.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+---
+server:
+  port: 7001      
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-config-eureka-client
+ 
+eureka:
+  instance:
+    hostname: eureka7001.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
