@@ -8,7 +8,7 @@ server:
 spring:
    profiles: dev
    application:
-    name: microservicecloud-dept 
+    name: microservicecloud-config-dept-client
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
@@ -30,7 +30,7 @@ eureka:
   client: #客户端注册进eureka服务列表内
     service-url: 
       #defaultZone: http://localhost:7001/eureka
-       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/      
+       defaultZone: http://eureka7001.com:7001/eureka     
   instance:
     instance-id: dept-8001.com
     prefer-ip-address: true     #访问路径可以显示IP地址     
@@ -46,7 +46,7 @@ server:
 spring:
    profiles: test
    application:
-    name: microservicecloud-dept 
+    name: microservicecloud-config-dept-client
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
