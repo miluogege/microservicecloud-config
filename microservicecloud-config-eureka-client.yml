@@ -4,7 +4,7 @@
     - dev
 ---
 server:
-  port: 7001#注册中心占用7001端口
+  port: 7001 #注册中心占用7001端口
   
 spring:
   profiles: dev
